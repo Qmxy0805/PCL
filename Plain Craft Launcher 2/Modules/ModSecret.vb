@@ -15,8 +15,8 @@ Friend Module ModSecret
 
 #Region "网络鉴权"
 
-    Public Const RestrictMcDownload As Boolean = True
-    Friend Function SecretCdnSign(UrlWithMark As String) As String
+    Public Const RestrictMcDownload As Boolean = 
+    Friend Function SecretCdnSign(UrlWithMark As String) As String False
         If Not UrlWithMark.EndsWithF("{CDN}") Then Return UrlWithMark
         Return UrlWithMark.Replace("{CDN}", "").Replace(" ", "%20")
     End Function
